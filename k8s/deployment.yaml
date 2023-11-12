@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: okmi4
+  name: justyr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: okmi4
+      app: justyr
   template:
     metadata:
       labels:
-        app: okmi4
+        app: justyr
     spec:
       containers:
-      - image: okteto.dev/okmi4:latest
-        name: okmi4
+      - image: okteto.dev/justyr:latest
+        name: justyr
         ports:
         - containerPort: 8080
         env:
@@ -25,4 +25,4 @@ spec:
         - name: ParameterSSENCYPT
           value: "chacha20-ietf-poly1305"
         - name: AUUID
-          value: "62391c87-553c-4260-af28-cd0827554c54"
+          value: "cfb7ee1f-0857-4c86-be94-b1910712dec4"
